@@ -34,7 +34,7 @@ def find_distances(addresses, limit = 20):
                 origin = address1
                 destination = address2
                 mode = 'walking'
-                response = requests.request('GET',f'https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins={origin},DC&destinations={destination}&mode={mode}&key=AIzaSyDjHY05x8GSfh3qeNx6D1BNWXPVJ1UR4c0')
+                response = requests.request('GET',f'https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins={origin},DC&destinations={destination}&mode={mode}&key=#mykey')
                 response = response.content
                 response = json.loads(response)
                 time = response['rows'][0]['elements'][0]['duration']['text']
